@@ -576,6 +576,107 @@
   .other-service-card i { color:#A90910; font-style:normal; }
   @media(max-width:900px) { .other-services-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media(max-width:560px) { .other-services-page { padding-top:30px; } .other-services-grid { grid-template-columns:1fr; } }
+
+  /* Мобильная главная 01.09.2026 — отдельный дизайн, desktop не затрагивается */
+  (max-width:560px) {
+    body.mobile-home-redesign .header-info-bar { display:none; }
+    body.mobile-home-redesign .header-inner { min-height:60px; padding:7px 0; }
+    body.mobile-home-redesign .logo { order:1; }
+    body.mobile-home-redesign .logo img { width:108px; }
+    body.mobile-home-redesign .nav-pill { order:2; display:flex; margin-left:auto; }
+    body.mobile-home-redesign .nav-pill .cta-pill { display:flex; padding:10px 13px; font-size:0; box-shadow:none; }
+    body.mobile-home-redesign .nav-pill .cta-pill::after { content:"Позвонить"; font-size:12px; }
+    body.mobile-home-redesign .mobile-menu-btn { order:3; width:40px; height:40px; margin-left:7px; }
+
+    body.mobile-home-redesign .home-hero-full { display:block; width:calc(100% - 24px); min-height:0; height:auto; margin-top:8px; border-radius:22px; }
+    body.mobile-home-redesign .home-hero-full .hhf-bg-wrap { position:relative; inset:auto; width:100%; height:190px; border-radius:20px 20px 0 0; }
+    body.mobile-home-redesign .home-hero-full .hhf-bg { position:absolute; inset:0; width:100%; height:100%; transform:none; object-fit:cover; object-position:center; -webkit-mask-image:none; mask-image:none; }
+    body.mobile-home-redesign .home-hero-full .hhf-scrim { background:linear-gradient(180deg,transparent 55%,rgba(255,255,255,.18)); }
+    body.mobile-home-redesign .home-hero-full .hhf-inner { position:relative; height:auto; padding:20px 18px 18px; }
+    body.mobile-home-redesign .home-hero-full .badge { margin-bottom:10px; font-size:11px; }
+    body.mobile-home-redesign .home-hero-full h1 { width:auto; margin-bottom:11px; font-size:30px; line-height:1.03; }
+    body.mobile-home-redesign .home-hero-full .lead { font-size:14px; line-height:1.45; }
+    body.mobile-home-redesign .home-hero-full .hero-actions { display:block; margin-top:16px; }
+    body.mobile-home-redesign .home-hero-full .hero-actions .btn-primary { width:100%; min-height:50px; justify-content:center; }
+    body.mobile-home-redesign .home-hero-full .hero-actions .btn-secondary { display:none; }
+    body.mobile-home-redesign .home-hero-full .trust-chips { position:static; display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-top:12px; }
+    body.mobile-home-redesign .home-hero-full .trust-chip { display:grid; min-width:0; grid-template-columns:26px 1fr; padding:8px; column-gap:7px; }
+    body.mobile-home-redesign .home-hero-full .trust-chip .tc-icon { width:26px; height:26px; border-radius:7px; }
+    body.mobile-home-redesign .home-hero-full .trust-chip .tc-source { font-size:9px; }
+    body.mobile-home-redesign .home-hero-full .trust-chip .tc-rating { gap:3px; font-size:10px; }
+    body.mobile-home-redesign .home-hero-full .tc-stars svg:nth-child(n+2) { display:none; }
+    body.mobile-home-redesign .home-quick { display:flex; width:calc(100% - 24px); margin-top:10px; overflow-x:auto; border-radius:16px; scroll-snap-type:x mandatory; scrollbar-width:none; }
+    body.mobile-home-redesign .home-quick::-webkit-scrollbar { display:none; }
+    body.mobile-home-redesign .home-quick > div { flex:0 0 44%; padding:13px 12px; border:0; border-right:1px solid #ECEEF0; scroll-snap-align:start; }
+    body.mobile-home-redesign .home-quick b { font-size:15px; }
+    body.mobile-home-redesign .home-quick span { font-size:10px; }
+
+    body.mobile-home-redesign main.wrap { padding-left:12px; padding-right:12px; }
+    body.mobile-home-redesign .services,body.mobile-home-redesign .home-section { padding-top:38px; padding-bottom:38px; }
+    body.mobile-home-redesign .services-head { margin-bottom:16px; padding:0 6px; }
+    body.mobile-home-redesign .services h2,body.mobile-home-redesign .home-section h2 { font-size:27px; }
+    body.mobile-home-redesign .services-text-grid { display:flex; gap:10px; overflow-x:auto; padding:0 6px 9px; scroll-snap-type:x mandatory; scrollbar-width:none; }
+    body.mobile-home-redesign .services-text-grid::-webkit-scrollbar { display:none; }
+    body.mobile-home-redesign .service-text-card { flex:0 0 78%; min-height:176px; padding:18px; scroll-snap-align:start; }
+    body.mobile-home-redesign .service-text-card:first-child { background:#1C2B3E; color:#fff; border-color:#1C2B3E; }
+    body.mobile-home-redesign .service-text-card:first-child .service-text-desc { color:#CBD2DB; }
+    body.mobile-home-redesign .service-text-card:first-child .service-text-link { color:#fff; }
+    body.mobile-home-redesign .services::after { content:"Листайте услуги →"; display:block; padding:3px 7px 0; color:#8993A0; font-size:11px; }
+
+    body.mobile-home-redesign .conversion-band { margin:4px 0 32px; padding:24px 20px; }
+    body.mobile-home-redesign .conversion-band h2 { font-size:24px; }
+    body.mobile-home-redesign .conversion-band p { font-size:13px; }
+    body.mobile-home-redesign .conversion-actions .btn-secondary { display:none; }
+
+    body.mobile-home-redesign .process { padding:30px 22px 28px; }
+    body.mobile-home-redesign .process > p { margin-bottom:22px; font-size:13px; }
+    body.mobile-home-redesign .process .steps { display:block; margin-left:11px; padding-left:22px; border-left:2px solid #E1E5E8; }
+    body.mobile-home-redesign .process .step { position:relative; min-height:0; margin:0; padding:0 0 23px; overflow:visible; border:0; border-radius:0; background:transparent; box-shadow:none; }
+    body.mobile-home-redesign .process .step:last-child { padding-bottom:0; }
+    body.mobile-home-redesign .process .step-num { position:absolute; top:0; left:-34px; display:grid; place-items:center; width:22px; height:22px; margin:0; border-radius:50%; background:#A90910; color:#fff; font-size:9px; }
+    body.mobile-home-redesign .process .step-title { padding-top:1px; font-size:15px; }
+    body.mobile-home-redesign .process .step-desc { max-width:260px; font-size:12px; }
+    body.mobile-home-redesign .process-step-cta { position:static; float:right; margin:0 0 5px 10px; }
+
+    body.mobile-home-redesign .portfolio-teaser { overflow:hidden; }
+    body.mobile-home-redesign .portfolio-teaser > p { margin-bottom:18px; font-size:13px; }
+    body.mobile-home-redesign .portfolio-mosaic { display:flex; width:auto; height:auto; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
+    body.mobile-home-redesign .portfolio-mosaic::-webkit-scrollbar { display:none; }
+    body.mobile-home-redesign .portfolio-mosaic .gallery-item,body.mobile-home-redesign .portfolio-mosaic .gallery-item:first-child { flex:0 0 88%; height:335px; scroll-snap-align:center; }
+    body.mobile-home-redesign .portfolio-teaser .hero-actions { margin-top:13px; }
+    body.mobile-home-redesign .portfolio-teaser .btn-secondary { width:100%; justify-content:center; }
+
+    body.mobile-home-redesign .reviews-section { padding:30px 20px; }
+    body.mobile-home-redesign .reviews-section .lead { font-size:12px; margin-bottom:15px; }
+    body.mobile-home-redesign .reviews-grid { display:block; }
+    body.mobile-home-redesign .reviews-grid::before { content:"5,0  ★★★★★  ·  Яндекс Карты и 2ГИС"; display:block; margin-bottom:10px; padding:17px; border-radius:16px; background:#1C2B3E; color:#fff; font-size:13px; font-weight:800; }
+    body.mobile-home-redesign .review-card { padding:18px; }
+    body.mobile-home-redesign .review-card:nth-child(n+2) { display:none; }
+    body.mobile-home-redesign .review-text { display:-webkit-box; overflow:hidden; -webkit-line-clamp:6; -webkit-box-orient:vertical; font-size:13px; }
+
+    body.mobile-home-redesign .home-faq .faq-item { position:relative; padding:17px 45px 17px 17px; cursor:pointer; }
+    body.mobile-home-redesign .home-faq .faq-item::after { content:"+"; position:absolute; top:15px; right:17px; color:#A90910; font-size:22px; }
+    body.mobile-home-redesign .home-faq .faq-item.is-open::after { content:"−"; }
+    body.mobile-home-redesign .home-faq .faq-a { display:none; padding-top:9px; font-size:13px; }
+    body.mobile-home-redesign .home-faq .faq-item.is-open .faq-a { display:block; }
+    body.mobile-home-redesign .home-faq .faq-q { margin:0; font-size:14px; line-height:1.4; }
+
+    body.mobile-home-redesign .cta-strip { display:block; margin:5px 0 28px; padding:25px 21px; border-radius:22px; }
+    body.mobile-home-redesign .cta-strip h3 { font-size:23px; }
+    body.mobile-home-redesign .cta-strip .btn-primary { width:100%; margin-top:18px; justify-content:center; }
+    body.mobile-home-redesign footer.wrap { margin-top:28px; padding:20px 16px 18px; border-radius:22px; }
+    body.mobile-home-redesign .footer-card { display:block; padding:18px; }
+    body.mobile-home-redesign .footer-map { display:none; }
+    body.mobile-home-redesign .footer-card-info .req { font-size:10px; line-height:1.45; }
+    body.mobile-home-redesign .footer-card-info .trust-chips { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+    body.mobile-home-redesign .footer-card-info .trust-chip { min-width:0; padding:8px; grid-template-columns:26px 1fr; }
+    body.mobile-home-redesign .footer-card-info .trust-chip .tc-icon { width:26px; height:26px; }
+    body.mobile-home-redesign .footer-cols { grid-template-columns:1fr 1fr; gap:9px; margin-bottom:0; }
+    body.mobile-home-redesign .footer-col { padding:10px 11px; border:1px solid #E8EBEE; border-radius:13px; }
+    body.mobile-home-redesign .footer-col h4 { margin:0; }
+    body.mobile-home-redesign .footer-links { display:none; }
+    body.mobile-home-redesign .footer-bottom-inner { justify-content:center; text-align:center; }
+  }
 </style>
 <meta name="yandex-verification" content="56a7253bbc48aed4" />
 <script type="text/javascript" data-cfasync="false">
