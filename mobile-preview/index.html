@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <title>Мобильный просмотр — Кров Мастер</title>
   <style>
     *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,sans-serif;background:#e9edf1;color:#172235}
     body{display:flex;flex-direction:column;align-items:center;padding:14px 14px 30px}
     .toolbar{width:min(100%,760px);display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;padding:10px 14px;border:1px solid #d5dbe0;border-radius:16px;background:#fff;box-shadow:0 10px 30px -22px #172235}
-    .toolbar b{font-size:14px}.toolbar span{color:#687483;font-size:12px}.actions{display:flex;gap:8px}.actions button{padding:8px 12px;border:0;border-radius:999px;background:#1c2b3e;color:#fff;font-weight:700;cursor:pointer}.actions button:last-child{background:#a90910}
+    .toolbar b{font-size:14px}.version{display:inline-block;margin-left:8px;padding:4px 8px;border-radius:999px;background:#e7f7ec;color:#147a3d;font-size:10px;font-weight:800;font-style:normal}.toolbar span{color:#687483;font-size:12px}.actions{display:flex;gap:8px}.actions button{padding:8px 12px;border:0;border-radius:999px;background:#1c2b3e;color:#fff;font-weight:700;cursor:pointer}.actions button:last-child{background:#a90910}
     .phone{width:390px;max-width:100%;height:844px;overflow:hidden;border:10px solid #172235;border-radius:38px;background:#fff;box-shadow:0 26px 70px -30px rgba(23,34,53,.65)}
     iframe{display:block;width:100%;height:100%;border:0;background:#fff}
     .hint{margin-top:12px;color:#687483;font-size:12px;text-align:center}
@@ -16,14 +17,14 @@
   </style>
 </head>
 <body>
-  <div class="toolbar"><div><b>Мобильная версия сайта</b><br><span id="size">390 × 844 — обычный телефон</span></div><div class="actions"><button type="button" id="size-btn">Шире</button><button type="button" id="reload">Обновить</button></div></div>
-  <div class="phone" id="phone"><iframe id="site" src="/" title="Мобильная версия сайта Кров Мастер"></iframe></div>
+  <div class="toolbar"><div><b>Мобильная версия сайта</b><i class="version">НОВЫЙ ДИЗАЙН</i><br><span id="size">390 × 844 — обычный телефон</span></div><div class="actions"><button type="button" id="size-btn">Шире</button><button type="button" id="reload">Обновить</button></div></div>
+  <div class="phone" id="phone"><iframe id="site" src="/?mobile-redesign=20260901-2" title="Мобильная версия сайта Кров Мастер"></iframe></div>
   <div class="hint">Листайте сайт внутри рамки телефона и делайте скриншоты нужных мест.</div>
   <script>
     const phone=document.getElementById('phone'), frame=document.getElementById('site'), label=document.getElementById('size'), sizeBtn=document.getElementById('size-btn');
     let wide=false;
     sizeBtn.onclick=()=>{wide=!wide;phone.style.width=wide?'430px':'390px';label.textContent=wide?'430 × 844 — большой телефон':'390 × 844 — обычный телефон';sizeBtn.textContent=wide?'Уже':'Шире'};
-    document.getElementById('reload').onclick=()=>{frame.src=frame.src};
+    document.getElementById('reload').onclick=()=>{frame.src='/?mobile-redesign=20260901-2&t='+Date.now()};
   </script>
 </body>
 </html>
