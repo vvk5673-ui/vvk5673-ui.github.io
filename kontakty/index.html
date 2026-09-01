@@ -1,7 +1,5 @@
 <!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
+<html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Контакты | Кров Мастер</title>
 <meta name="description" content="Контакты «Кров Мастер» в Саратове: телефоны, адрес, часы работы, форма заявки. Бесплатный выезд специалиста.">
@@ -71,6 +69,9 @@
   .footer-card-info .contact-line { display:block; font-size:14px; font-weight:600; color:#1A2233; margin-bottom:4px; text-decoration:none; }
   .footer-card-info .contact-line:hover { color:#980B11; }
   .footer-card-info .hours { font-size:13px; color:#5D6572; margin-top:8px; }
+  .footer-contact-cta { display:inline-flex; align-items:center; justify-content:center; min-height:48px; margin-top:18px; padding:0 24px; border:0; border-radius:999px; background:#980B11; color:#fff; font-size:14px; font-weight:750; font-family:inherit; cursor:pointer; box-shadow:0 12px 24px -14px rgba(152,11,17,.55); transition:transform .15s ease, box-shadow .15s ease; }
+  .footer-contact-cta:hover { transform:translateY(-2px); box-shadow:0 16px 28px -14px rgba(152,11,17,.7); }
+  .contacts-footer-only footer.wrap { margin-top:34px; }
   .footer-map { border-radius:1.1rem; overflow:hidden; min-height:150px; border:1px solid rgba(28,43,62,0.08); }
   .footer-map iframe { width:100%; height:100%; min-height:150px; border:0; display:block; border-radius:1.1rem; }
   .footer-bottom { width:100%; margin-top:12px; background:linear-gradient(90deg,#F1F4F7 0%,#F8F9FA 48%,#F1F4F7 100%); border-top:1px solid #E1E5E9; border-bottom:1px solid #E1E5E9; color:#5D6877; font-size:12px; font-weight:650; }
@@ -591,10 +592,7 @@
         webvisor:true
    });
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/57103954" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-</head>
-<body>
-<div class="bg-blob"></div>
+<noscript><div><img src="https://mc.yandex.ru/watch/57103954" style="position:absolute; left:-9999px;" alt="" /></div></noscript></head><body class="contacts-footer-only"><div class="bg-blob"></div>
 <header class="wrap">
   <div class="header-info-bar"><div class="header-address"><span class="header-info-icon">●</span>Саратовская область, г. Саратов, ул. Танкистов, 90А</div><div class="header-hours"><span class="header-info-icon">◷</span>Пн–Сб 08:00–18:00 · Вс — выходной</div></div>
   <div class="header-inner">
@@ -613,86 +611,7 @@
       <a class="mobile-cta" href="tel:+79053684555">Позвонить: +7 (905) 368-45-55</a>
     </div>
   </div>
-</header>
-<div class="wrap breadcrumb"><a href="/">Главная</a> / Контакты</div>
-<main class="wrap">
-  <div class="page-head">
-    <h1>Контакты</h1>
-    <p class="lead">Свяжитесь любым удобным способом — перезвоним и рассчитаем стоимость работ.</p>
-  </div>
-  <div class="contact-grid">
-    <div class="info-card">
-      <div class="info-block"><div class="info-label">Телефоны</div><div class="info-value"><a href="tel:+79053684555">+7 (905) 368-45-55</a></div></div>
-      <div class="info-block"><div class="info-label">Email</div><div class="info-value"><a href="mailto:info@krovmaster64.ru">info@krovmaster64.ru</a></div></div>
-      <div class="info-block"><div class="info-label">Адрес</div><div class="info-value">г. Саратов, ул. Танкистов, 90А</div></div>
-      <div class="info-block"><div class="info-label">Часы работы</div><div class="info-value">Пн–Сб: 08:00–18:00</div><div class="info-value">Вс: выходной</div></div>
-    </div>
-    <form class="form-card" id="lead-form">
-      <h3>Оставить заявку</h3>
-      <input type="text" name="name" placeholder="Имя" autocomplete="name">
-      <input type="tel" name="phone" placeholder="Телефон *" autocomplete="tel" required>
-      <label class="consent"><input type="checkbox" name="consent" required style="margin-top:2px;"><span>Даю согласие на обработку персональных данных в соответствии с <a href="/politika-konfidencialnosti/">политикой конфиденциальности</a></span></label>
-      <button type="submit">Отправить</button>
-      <p class="form-status" id="lead-form-status" aria-live="polite"></p>
-    </form>
-    <div class="map-frame">
-      <iframe src="https://yandex.ru/map-widget/v1/?ll=46.025920%2C51.574918&mode=search&oid=140335540246&ol=biz&z=15&view=200m" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Кров Мастер на карте"></iframe>
-    </div>
-  </div>
-</main>
-<script>(function(){
-  var form = document.getElementById('lead-form');
-  var status = document.getElementById('lead-form-status');
-  if(!form || !status) return;
-
-  function isValidPhone(raw){
-    var digits = String(raw || '').replace(/\D/g, '');
-    if (digits.length === 11 && (digits.charAt(0) === '7' || digits.charAt(0) === '8')) return true;
-    if (digits.length === 10 && digits.charAt(0) === '9') return true;
-    return false;
-  }
-
-  form.addEventListener('submit', async function(event){
-    event.preventDefault();
-    var button = form.querySelector('button[type="submit"]');
-    var formData = new FormData(form);
-    var phoneValue = String(formData.get('phone') || '').trim();
-    status.textContent = '';
-    status.classList.remove('error');
-    if(!isValidPhone(phoneValue)) {
-      status.textContent = 'Проверьте номер телефона — похоже, не хватает цифр или есть лишние символы';
-      status.classList.add('error');
-      return;
-    }
-    button.disabled = true;
-    button.textContent = 'Отправляем…';
-
-    try {
-      var response = await fetch('/api/submit-lead', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          name: String(formData.get('name') || '').trim(),
-          phone: phoneValue,
-          consent: formData.get('consent') === 'on',
-          source: (function(){ try { return sessionStorage.getItem('lead_source') || ''; } catch(e){ return ''; } })(),
-          page: (document.title || '').split('|')[0].trim() || 'Контакты'
-        })
-      });
-      var result = await response.json().catch(function(){ return {}; });
-      if(!response.ok || !result.ok) {
-        throw new Error(result.error || 'Не удалось отправить заявку. Попробуйте ещё раз.');
-      }
-      form.innerHTML = '<p class="form-status">Заявка отправлена, перезвоним в ближайшее время</p>';
-    } catch(error) {
-      status.textContent = error.message || 'Не удалось отправить заявку. Попробуйте ещё раз.';
-      status.classList.add('error');
-      button.disabled = false;
-      button.textContent = 'Отправить';
-    }
-  });
-})();</script>
-<footer class="wrap">
+</header><footer class="wrap">
   <div class="footer-card">
     <div class="footer-card-info">
       <div class="req">ООО «Кров Мастер» · ОГРН 1176451028665 · ИНН 6452131151 · КПП 645201001</div>
@@ -710,6 +629,7 @@
       <span class="tc-info"><span class="tc-source">2ГИС</span><span class="tc-rating"><b>5,0</b><span class="tc-stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.8 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.8 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.8 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.8 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.8 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6L12 2z"/></svg></span></span></span>
     </a>
   </div>
+      <button type="button" class="footer-contact-cta js-open-lead">Бесплатная консультация</button>
     </div>
     <div class="footer-map"><iframe src="https://yandex.ru/map-widget/v1/?ll=46.025920%2C51.574918&mode=search&oid=140335540246&ol=biz&z=15&view=200m" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Кров Мастер на карте"></iframe></div>
   </div>
@@ -863,6 +783,4 @@
       button.textContent = button.dataset.label || 'Отправить заявку';
     }
   });
-})();</script>
-</body>
-</html>
+})();</script></body></html>
