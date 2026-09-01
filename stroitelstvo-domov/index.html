@@ -334,7 +334,9 @@
   .lead-modal-overlay { position:absolute; inset:0; background:rgba(15,20,28,0.6); }
   .lead-modal-panel { position:relative; z-index:1; width:100%; max-width:420px; max-height:90vh; overflow:auto; scrollbar-width:none; -ms-overflow-style:none; }
   .lead-modal-panel::-webkit-scrollbar { display:none; width:0; height:0; }
-  .lead-modal-panel .form-card { border-radius:1.75rem; padding-top:52px; }
+  .lead-modal-panel .form-card { border-radius:1.75rem; padding-top:32px; }
+  .lead-modal-title { margin:0 42px 8px 0!important; color:#fff; font-size:21px!important; line-height:1.22; letter-spacing:-.015em; }
+  .lead-modal-title span { display:block; white-space:nowrap; }
   .lead-modal-panel .lead-modal-close { position:absolute; top:10px; right:10px; width:38px; height:38px; border-radius:50%; border:none; background:transparent; color:#E5484D; font-size:30px; line-height:1; cursor:pointer; z-index:2; display:flex; align-items:center; justify-content:center; padding:0; }
   .lead-modal-panel .lead-modal-close:hover { background:rgba(255,255,255,0.1); }
   html.lead-modal-open, body.lead-modal-open { overflow:hidden; }
@@ -354,7 +356,9 @@
     .home-quick > div { padding:17px 14px; }
     .services,.home-section { padding-top:48px; padding-bottom:48px; }
     .svc-hero { margin-top:12px; padding:24px 20px; border-radius:22px; }
+    .lead-modal-title { font-size:19px!important; }
   }
+  (max-width:380px) { .lead-modal-title { font-size:17px!important; } }
 
   /* Конверсионная переработка блоков ниже главного экрана */
   .section-kicker { display:inline-flex; align-items:center; gap:8px; margin-bottom:10px; color:#980B11; font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
@@ -699,6 +703,7 @@
   <div class="lead-modal-panel" role="dialog" aria-modal="true" aria-label="Форма заявки">
     <form class="form-card lead-modal-form" id="lead-modal-form">
       <button type="button" class="lead-modal-close" data-lead-close aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <h3 class="lead-modal-title"><span>Наш специалист свяжется</span><span>с вами в ближайшее время</span></h3>
       <input type="text" name="name" placeholder="Имя" autocomplete="name">
       <input type="tel" name="phone" placeholder="Телефон *" autocomplete="tel" required>
       <label class="consent"><input type="checkbox" name="consent" required style="margin-top:2px;"><span>Даю согласие на обработку персональных данных в соответствии с <a href="/politika-konfidencialnosti/">политикой конфиденциальности</a></span></label>
