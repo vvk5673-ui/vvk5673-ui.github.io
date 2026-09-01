@@ -61,7 +61,7 @@
   .mobile-submenu a { display:block; padding:11px 12px; font-size:14px; font-weight:500; color:#5D6572; border-radius:0.7rem; }
   .mobile-submenu a.active { color:#980B11; }
   .mobile-cta { display:block; margin-top:8px; padding:14px 16px; text-align:center; background:#980B11; color:#fff; border-radius:0.8rem; font-size:15px; font-weight:700; }
-  footer.wrap { background:#fff; border:1px solid rgba(28,43,62,0.08); border-bottom:0; border-radius:2rem 2rem 0 0; padding:40px 32px 0; margin-top:80px; margin-bottom:0; max-width:1280px; }
+  footer.wrap { background:#fff; border:1px solid rgba(28,43,62,0.08); border-radius:2rem; padding:40px 32px 24px; margin-top:80px; margin-bottom:0; max-width:1280px; }
   .footer-cols { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:28px 24px; margin-bottom:28px; }
   .footer-col h4 { font-size:13px; font-weight:700; color:#1A2233; margin:0 0 10px; }
   .footer-col a { display:block; font-size:13px; line-height:1.65; color:#5D6572; text-decoration:none; }
@@ -73,8 +73,8 @@
   .footer-card-info .hours { font-size:13px; color:#5D6572; margin-top:8px; }
   .footer-map { border-radius:1.1rem; overflow:hidden; min-height:150px; border:1px solid rgba(28,43,62,0.08); }
   .footer-map iframe { width:100%; height:100%; min-height:150px; border:0; display:block; border-radius:1.1rem; }
-  .footer-bottom { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; min-height:42px; padding:10px 0; color:#5D6877; font-size:12px; font-weight:650; }
-  .footer-bottom::before { content:""; position:absolute; z-index:-1; top:0; bottom:0; left:50%; width:100vw; transform:translateX(-50%); background:linear-gradient(90deg,#F1F4F7 0%,#F8F9FA 48%,#F1F4F7 100%); border-top:1px solid #E1E5E9; border-bottom:1px solid #E1E5E9; }
+  .footer-bottom { width:100%; margin-top:12px; background:linear-gradient(90deg,#F1F4F7 0%,#F8F9FA 48%,#F1F4F7 100%); border-top:1px solid #E1E5E9; border-bottom:1px solid #E1E5E9; color:#5D6877; font-size:12px; font-weight:650; }
+  .footer-bottom-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; min-height:42px; padding-top:10px; padding-bottom:10px; }
   .footer-bottom a { color:#5D6877; }
   .footer-bottom a:hover { color:#980B11; }
 
@@ -310,7 +310,7 @@
   .photo-card img { height:340px; border-radius:24px; }
   .content { max-width:880px; }
   .cta-strip { border-radius:28px; }
-  footer.wrap { border-radius:28px 28px 0 0; }
+  footer.wrap { border-radius:28px; }
 
   @media(max-width:1100px) {
     .nav-links { gap:14px; font-size:13px; }
@@ -446,7 +446,7 @@
     .mobile-conversion-bar a,.mobile-conversion-bar button { display:flex; align-items:center; justify-content:center; min-height:46px; border:0; border-radius:12px; font-family:inherit; font-size:13px; font-weight:800; cursor:pointer; }
     .mobile-conversion-bar a { background:#F0F2F4; color:#1A2233; }
     .mobile-conversion-bar button { background:#A90910; color:#fff; }
-    footer.wrap { margin-bottom:94px; }
+    .footer-bottom { margin-bottom:94px; }
     .svc-hero .hero-actions { display:grid; width:100%; }
     .svc-hero .hero-actions > * { justify-content:center; width:100%; }
   }
@@ -630,7 +630,7 @@
       <div class="service-proof"><span>✓ Бесплатный замер</span><span>✓ Смета до начала работ</span><span>✓ Гарантия 7 лет</span></div>
     </div>
     <div class="svc-hero-media">
-      <div class="photo-card"><img src="/assets/site_photos/2026-08_betononasos-zaliv.jpg" alt="Заливка фундамента автобетононасосом — объект «Кров Мастер»"></div>
+      <div class="photo-card"><img src="/assets/site_photos/2020-02_img-20190321-wa0006.jpeg" alt="Опалубка фундамента — объект «Кров Мастер»"></div>
     </div>
   </section>
 <h3>Подробнее по направлениям</h3><div class="subpage-links"><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/svayno-rostverkovyy-fundament/">Свайно-ростверковый</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/lentochnyy-fundament/">Ленточный</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/monolitnyy-fundament/">Монолитный</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/stolbchatyy-fundament/">Столбчатый</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/uteplennaya-shvedskaya-plita/">Утеплённая шведская плита</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/blochnyy-fundament-bloki-fbs/">Блочный (ФБС)</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/buronabivnye-svai/">Буронабивные сваи</a></div>
@@ -691,11 +691,11 @@
     <div class="footer-map"><iframe src="https://yandex.ru/map-widget/v1/?ll=46.025920%2C51.574918&mode=search&oid=140335540246&ol=biz&z=15&view=200m" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Кров Мастер на карте"></iframe></div>
   </div>
   <div class="footer-cols"><div class="footer-col"><h4>Кровля</h4><div class="footer-links"><a href="/krovelnye-raboty-v-saratove-i-oblasti/">Все кровельные работы</a><a href="/krovelnye-raboty-v-saratove-i-oblasti/montazh-krovli-v-saratove-i-oblasti/">Монтаж кровли</a><a href="/krovelnye-raboty-v-saratove-i-oblasti/remonty-krovli-v-saratove-i-oblasti/">Ремонт кровли</a><a href="/krovelnye-raboty-v-saratove-i-oblasti/prochie-krovelnye-raboty-v-saratove-i-oblasti/">Прочие кровельные работы</a></div></div><div class="footer-col"><h4>Фундамент</h4><div class="footer-links"><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/">Все виды фундамента</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/svayno-rostverkovyy-fundament/">Свайно-ростверковый</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/lentochnyy-fundament/">Ленточный</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/monolitnyy-fundament/">Монолитный</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/stolbchatyy-fundament/">Столбчатый</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/uteplennaya-shvedskaya-plita/">Утеплённая шведская плита</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/blochnyy-fundament-bloki-fbs/">Блочный (ФБС)</a><a href="/stroitelstvo-fundamentov-v-saratove-i-oblasti/buronabivnye-svai/">Буронабивные сваи</a></div></div><div class="footer-col"><h4>Дома под ключ</h4><div class="footer-links"><a href="/stroitelstvo-domov/">Все технологии</a><a href="/stroitelstvo-domov/karkasnyy-dom/">Каркасный дом</a><a href="/stroitelstvo-domov/kirpichnyy-dom/">Кирпичный дом</a><a href="/stroitelstvo-domov/dom-iz-gazobetona/">Дом из газобетона</a></div></div><div class="footer-col"><h4>Заборы</h4><div class="footer-links"><a href="/zabory/">Все виды заборов</a><a href="/zabory/proflist/">Профлист</a><a href="/zabory/evroshtaketnik/">Евроштакетник</a><a href="/zabory/setka-rabica/">Сетка-рабица</a><a href="/zabory/otkatnye-vorota/">Откатные ворота</a><a href="/zabory/raspashnye-vorota/">Распашные ворота</a></div></div><div class="footer-col"><h4>Благоустройство</h4><div class="footer-links"><a href="/trotuarnaya-plitka/">Тротуарная плитка</a><a href="/blagoustroystvo-pridomovoy-territorii/">Благоустройство территории</a><a href="/landshaftnyy-dizayn/">Ландшафтный дизайн</a><a href="/asfaltirovanie/">Асфальтирование</a></div></div><div class="footer-col"><h4>Инженерия и отделка</h4><div class="footer-links"><a href="/otoplenie/">Отопление</a><a href="/elektromontazh/">Электромонтаж</a><a href="/uteplenie-doma/">Утепление дома</a><a href="/fasadnye-raboty/">Фасадные работы</a></div></div><div class="footer-col"><h4>Прочие работы</h4><div class="footer-links"><a href="/vozvedeniya-monolitnyh-sten/">Возведение монолитных стен</a><a href="/dizayn-proekt/">Дизайн-проект</a><a href="/snos-doma/">Снос дома</a><a href="/hozblok/">Хозблок</a></div></div><div class="footer-col"><h4>О компании</h4><div class="footer-links"><a href="/o-nas/">О нас</a><a href="/nashi-raboty/">Наши работы</a><a href="/vakansii/">Вакансии</a><a href="/kontakty/">Контакты</a><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a></div></div></div>
-  <div class="footer-bottom">
-    <div>© 2026 Кров Мастер</div>
-    <div><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a></div>
-  </div>
 </footer>
+<div class="footer-bottom"><div class="footer-bottom-inner wrap">
+  <div>© 2026 Кров Мастер</div>
+  <div><a href="/politika-konfidencialnosti/">Политика конфиденциальности</a></div>
+</div></div>
 <button type="button" class="back-to-top" id="back-to-top" aria-label="Вернуться наверх" title="Наверх"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
 <div class="mobile-conversion-bar"><a href="tel:+79053684555">Позвонить</a><button type="button" class="js-open-lead">Получить расчёт</button></div>
 <div class="lead-modal" id="lead-modal" aria-hidden="true">
