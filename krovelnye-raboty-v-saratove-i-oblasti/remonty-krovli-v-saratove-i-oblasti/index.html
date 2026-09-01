@@ -61,7 +61,7 @@
   .mobile-submenu a { display:block; padding:11px 12px; font-size:14px; font-weight:500; color:#5D6572; border-radius:0.7rem; }
   .mobile-submenu a.active { color:#980B11; }
   .mobile-cta { display:block; margin-top:8px; padding:14px 16px; text-align:center; background:#980B11; color:#fff; border-radius:0.8rem; font-size:15px; font-weight:700; }
-  footer.wrap { background:#fff; border:1px solid rgba(28,43,62,0.08); border-radius:2rem; padding:40px 32px 24px; margin-top:80px; margin-bottom:40px; max-width:1280px; }
+  footer.wrap { background:#fff; border:1px solid rgba(28,43,62,0.08); border-bottom:0; border-radius:2rem 2rem 0 0; padding:40px 32px 0; margin-top:80px; margin-bottom:0; max-width:1280px; }
   .footer-cols { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:28px 24px; margin-bottom:28px; }
   .footer-col h4 { font-size:13px; font-weight:700; color:#1A2233; margin:0 0 10px; }
   .footer-col a { display:block; font-size:13px; line-height:1.65; color:#5D6572; text-decoration:none; }
@@ -73,8 +73,9 @@
   .footer-card-info .hours { font-size:13px; color:#5D6572; margin-top:8px; }
   .footer-map { border-radius:1.1rem; overflow:hidden; min-height:150px; border:1px solid rgba(28,43,62,0.08); }
   .footer-map iframe { width:100%; height:100%; min-height:150px; border:0; display:block; border-radius:1.1rem; }
-  .footer-bottom { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13px; color:#8991A0; padding-top:20px; border-top:1px solid rgba(28,43,62,0.08); }
-  .footer-bottom a { color:#8991A0; }
+  .footer-bottom { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; min-height:42px; padding:10px 0; color:#5D6877; font-size:12px; font-weight:650; }
+  .footer-bottom::before { content:""; position:absolute; z-index:-1; top:0; bottom:0; left:50%; width:100vw; transform:translateX(-50%); background:linear-gradient(90deg,#F1F4F7 0%,#F8F9FA 48%,#F1F4F7 100%); border-top:1px solid #E1E5E9; border-bottom:1px solid #E1E5E9; }
+  .footer-bottom a { color:#5D6877; }
   .footer-bottom a:hover { color:#980B11; }
 
   .trust-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
@@ -309,7 +310,7 @@
   .photo-card img { height:340px; border-radius:24px; }
   .content { max-width:880px; }
   .cta-strip { border-radius:28px; }
-  footer.wrap { border-radius:28px; }
+  footer.wrap { border-radius:28px 28px 0 0; }
 
   @media(max-width:1100px) {
     .nav-links { gap:14px; font-size:13px; }
