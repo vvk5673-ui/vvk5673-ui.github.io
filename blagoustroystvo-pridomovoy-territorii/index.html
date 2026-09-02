@@ -347,7 +347,7 @@
   .lead-modal-panel .form-card { border-radius:1.75rem; padding-top:32px; }
   .lead-modal-title { margin:0 42px 8px 0!important; color:#fff; font-size:21px!important; line-height:1.22; letter-spacing:-.015em; }
   .lead-modal-title span { display:block; white-space:nowrap; }
-  .lead-modal-panel .lead-modal-close { position:absolute; top:10px; right:10px; width:38px; height:38px; border-radius:50%; border:none; background:transparent; color:#E5484D; font-size:30px; line-height:1; cursor:pointer; z-index:2; display:flex; align-items:center; justify-content:center; padding:0; }
+  .lead-modal-panel .lead-modal-close { position:absolute; top:10px; right:10px; width:38px; height:38px; border-radius:50%; border:none; background:transparent; color:#fff; font-size:30px; line-height:1; cursor:pointer; z-index:2; display:flex; align-items:center; justify-content:center; padding:0; }
   .lead-modal-panel .lead-modal-close:hover { background:rgba(255,255,255,0.1); }
   html.lead-modal-open, body.lead-modal-open { overflow:hidden; }
 
@@ -584,6 +584,22 @@
   .other-service-card i { color:#A90910; font-style:normal; }
   @media(max-width:900px) { .other-services-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media(max-width:560px) { .other-services-page { padding-top:30px; } .other-services-grid { grid-template-columns:1fr; } }
+
+  /* Текстовая страница политики конфиденциальности */
+  .privacy-text-page .cta-pill,.privacy-text-page .max-pill-header,.privacy-text-page .mobile-cta,.privacy-text-page .mobile-max-cta,.privacy-text-page .mobile-conversion-bar,.privacy-text-page .max-contact-line,.privacy-text-page .footer-contact-cta { display:none!important; }
+  .privacy-document { max-width:880px; margin:34px auto 0; padding:42px 48px; border:1px solid #E5E8EB; border-radius:26px; background:#fff; box-shadow:0 24px 55px -48px rgba(28,43,62,.45); }
+  .privacy-document > h1 { margin-bottom:26px; }
+  .privacy-document .content { max-width:none; margin:0; padding:0; }
+  .privacy-document .content h2:first-child { margin-top:0; }
+  @media(max-width:560px) {
+    body.privacy-text-page { padding-bottom:0; }
+    .privacy-text-page .nav-pill { display:none; }
+    .privacy-document { margin-top:20px; padding:26px 20px; border-radius:20px; }
+    .privacy-document > h1 { margin-bottom:20px; font-size:31px; line-height:1.08; overflow-wrap:anywhere; }
+    .privacy-document .content h2 { margin-top:30px; font-size:22px; }
+    .privacy-document .content h3 { margin-top:24px; font-size:17px; }
+    .privacy-document .content p,.privacy-document .content li { font-size:14px; line-height:1.65; }
+  }
 
   /* Мобильная главная 01.09.2026 — отдельный дизайн, desktop не затрагивается */
   .mobile-all-services,.services-swipe-hint { display:none; }
