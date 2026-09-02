@@ -586,7 +586,7 @@
   @media(max-width:560px) { .other-services-page { padding-top:30px; } .other-services-grid { grid-template-columns:1fr; } }
 
   /* Мобильная главная 01.09.2026 — отдельный дизайн, desktop не затрагивается */
-  .mobile-all-services { display:none; }
+  .mobile-all-services,.services-swipe-hint { display:none; }
   @media(max-width:560px) {
     body.mobile-home-redesign .header-info-bar { display:none; }
     body.mobile-home-redesign .header-inner { min-height:60px; padding:7px 0; }
@@ -630,7 +630,7 @@
     body.mobile-home-redesign .service-text-card:first-child { background:linear-gradient(145deg,#fff 55%,#fff6f6); color:#172235; border-color:rgba(152,11,17,.28); }
     body.mobile-home-redesign .service-text-card:first-child .service-text-desc { color:#667080; }
     body.mobile-home-redesign .service-text-card:first-child .service-text-link { color:#A90910; }
-    body.mobile-home-redesign .services::after { content:"Листайте услуги →"; display:block; padding:3px 7px 0; color:#8993A0; font-size:11px; }
+    body.mobile-home-redesign .services-swipe-hint { display:block; padding:3px 7px 0; color:#8993A0; font-size:11px; }
     body.mobile-home-redesign .mobile-all-services { display:flex; width:calc(100% - 12px); min-height:50px; margin:14px 6px 0; align-items:center; justify-content:center; border:1px solid #D9DEE3; border-radius:999px; background:#fff; color:#172235; font-size:14px; font-weight:800; }
 
     body.mobile-home-redesign .conversion-band { margin:4px 0 32px; padding:24px 20px; }
@@ -664,6 +664,9 @@
     body.mobile-home-redesign .review-card { display:flex; flex:0 0 90%; min-height:280px; padding:18px; scroll-snap-align:center; scroll-snap-stop:always; }
     body.mobile-home-redesign .review-card:nth-child(n+2) { display:flex; }
     body.mobile-home-redesign .review-text { display:-webkit-box; overflow:hidden; -webkit-line-clamp:6; -webkit-box-orient:vertical; font-size:13px; }
+    body.mobile-home-redesign .review-meta { display:flex; flex-direction:column; align-items:flex-start; gap:8px; }
+    body.mobile-home-redesign .review-author-row { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+    body.mobile-home-redesign .review-date { display:block; color:#8991A0; font-size:11px; }
     body.mobile-home-redesign .review-meta a { display:inline-flex; align-items:center; gap:5px; padding:4px 7px; border:1px solid #E0E4E7; border-radius:9px; background:#fff; text-decoration:none; }
     body.mobile-home-redesign .review-meta a::before { content:""; width:18px; height:18px; flex:0 0 18px; background-position:center; background-repeat:no-repeat; background-size:contain; }
     body.mobile-home-redesign .review-meta a[href*="yandex.ru"]::before { background-image:url("/assets/yandex-maps.svg"); }
@@ -988,11 +991,6 @@
       function toggleFooter(){ var col=title.closest(".footer-col"); var open=col.classList.toggle("is-open"); title.setAttribute("aria-expanded",open?"true":"false"); }
       title.addEventListener("click",toggleFooter);
       title.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleFooter();} });
-    });
-    document.querySelectorAll(".services-text-grid,.portfolio-mosaic,.reviews-grid").forEach(function(slider){
-      var startX=0,startY=0,startScroll=0;
-      slider.addEventListener("touchstart",function(e){ var t=e.touches[0]; startX=t.clientX; startY=t.clientY; startScroll=slider.scrollLeft; },{passive:true});
-      slider.addEventListener("touchmove",function(e){ var t=e.touches[0],dx=startX-t.clientX,dy=startY-t.clientY; if(Math.abs(dx)>Math.abs(dy)+5){ e.preventDefault(); slider.scrollLeft=startScroll+dx; } },{passive:false});
     });
   }
 })();</script>
