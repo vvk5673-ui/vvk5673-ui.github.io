@@ -443,6 +443,9 @@
   }
   @media(max-width:560px) {
     body { padding-bottom:70px; }
+    body.service-page { padding-bottom:0; }
+    body.service-page .nav-pill .cta-pill,body.service-page .svc-hero .hero-actions,body.service-page .mobile-conversion-bar { display:none!important; }
+    body.service-page .footer-bottom { margin-bottom:0; }
     .services h2,.home-section h2 { font-size:29px; }
     .section-panel,.reviews-section { margin-left:-2px; margin-right:-2px; padding:30px 20px; border-radius:22px; }
     .conversion-band { margin:10px 0 42px; padding:28px 22px; border-radius:22px; }
@@ -606,19 +609,19 @@
     .privacy-document .content p,.privacy-document .content li { font-size:14px; line-height:1.65; }
   }
 
-  /* Мобильная главная 01.09.2026 — отдельный дизайн, desktop не затрагивается */
+  /* Мобильная шапка 02.09.2026 — общая для всех страниц сайта */
   .mobile-all-services,.services-swipe-hint { display:none; }
   @media(max-width:560px) {
-    body.mobile-home-redesign .header-info-bar { display:none; }
-    body.mobile-home-redesign .header-inner { min-height:60px; padding:7px 0; }
-    body.mobile-home-redesign .logo { order:1; }
-    body.mobile-home-redesign .logo img { width:108px; }
-    body.mobile-home-redesign .nav-pill { order:2; display:flex; margin-left:auto; }
-    body.mobile-home-redesign .nav-pill .cta-pill { display:flex; min-height:40px; align-items:center; justify-content:center; padding:10px 14px; white-space:nowrap; box-shadow:none; }
-    body.mobile-home-redesign .nav-pill .cta-pill .cta-full-text { display:none; }
-    body.mobile-home-redesign .nav-pill .cta-pill .cta-short-text { display:block; font-size:12px; line-height:1; }
-    body.mobile-home-redesign .nav-pill .max-pill-header { width:38px; height:38px; margin-right:6px; font-size:9px; }
-    body.mobile-home-redesign .mobile-menu-btn { order:3; width:40px; height:40px; margin-left:7px; }
+    .header-info-bar { display:none; }
+    .header-inner { min-height:60px; padding:7px 0; }
+    .logo { order:1; }
+    .logo img { width:108px; }
+    .nav-pill { order:2; display:flex; margin-left:auto; }
+    .nav-pill .cta-pill { display:flex; min-height:40px; align-items:center; justify-content:center; padding:10px 14px; white-space:nowrap; box-shadow:none; }
+    .nav-pill .cta-pill .cta-full-text { display:none; }
+    .nav-pill .cta-pill .cta-short-text { display:block; font-size:12px; line-height:1; }
+    .nav-pill .max-pill-header { width:38px; height:38px; margin-right:6px; font-size:9px; }
+    .mobile-menu-btn { order:3; width:40px; height:40px; margin-left:7px; }
 
     body.mobile-home-redesign .home-hero-full { display:block; width:calc(100% - 24px); min-height:0; height:auto; margin-top:8px; border-radius:22px; }
     body.mobile-home-redesign .home-hero-full .hhf-bg-wrap { position:relative; inset:auto; width:100%; height:190px; border-radius:20px 20px 0 0; }
@@ -743,7 +746,7 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/57103954" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </head>
-<body>
+<body class="service-page">
 <div class="bg-blob"></div>
 <header class="wrap">
   <div class="header-info-bar"><div class="header-address"><span class="header-info-icon">●</span>Саратовская область, г. Саратов, ул. Танкистов, 90А</div><div class="header-hours"><span class="header-info-icon">◷</span>Пн–Сб 08:00–18:00 · Вс — выходной</div></div>
@@ -775,7 +778,7 @@
       <h1>Фасадные работы в Саратове</h1>
       <div class="hero-actions">
         <button type="button" class="btn-primary js-open-lead">Оставить заявку</button>
-        <a class="btn-secondary" href="tel:+79053684555">+7 (905) 368-45-55</a>
+        <a class="btn-secondary" href="tel:+79053684555">Позвонить</a>
       </div>
       <div class="service-proof"><span>✓ Бесплатный замер</span><span>✓ Смета до начала работ</span><span>✓ Гарантия до 7 лет</span></div>
     </div>
