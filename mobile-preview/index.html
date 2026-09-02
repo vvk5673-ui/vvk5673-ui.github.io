@@ -18,13 +18,13 @@
 </head>
 <body>
   <div class="toolbar"><div><b>Мобильная версия сайта</b><i class="version">НОВЫЙ ДИЗАЙН</i><br><span id="size">390 × 844 — обычный телефон</span></div><div class="actions"><button type="button" id="size-btn">Шире</button><button type="button" id="reload">Обновить</button></div></div>
-  <div class="phone" id="phone"><iframe id="site" src="/mobile-redesign-preview/?v=3" title="Мобильная версия сайта Кров Мастер"></iframe></div>
+  <div class="phone" id="phone"><iframe id="site" src="/mobile-redesign-preview/?v=5" title="Мобильная версия сайта Кров Мастер"></iframe></div>
   <div class="hint">Листайте сайт внутри рамки телефона и делайте скриншоты нужных мест.</div>
   <script>
     const phone=document.getElementById('phone'), frame=document.getElementById('site'), label=document.getElementById('size'), sizeBtn=document.getElementById('size-btn');
     let wide=false;
     sizeBtn.onclick=()=>{wide=!wide;phone.style.width=wide?'430px':'390px';label.textContent=wide?'430 × 844 — большой телефон':'390 × 844 — обычный телефон';sizeBtn.textContent=wide?'Уже':'Шире'};
-    document.getElementById('reload').onclick=()=>{frame.src='/mobile-redesign-preview/?v=3&t='+Date.now()};
+    document.getElementById('reload').onclick=()=>{frame.src='/mobile-redesign-preview/?v=5&t='+Date.now()};
   </script>
 </body>
 </html>

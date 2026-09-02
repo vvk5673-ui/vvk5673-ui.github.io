@@ -580,14 +580,15 @@
   @media(max-width:560px) { .other-services-page { padding-top:30px; } .other-services-grid { grid-template-columns:1fr; } }
 
   /* Мобильная главная 01.09.2026 — отдельный дизайн, desktop не затрагивается */
+  .mobile-all-services { display:none; }
   @media(max-width:560px) {
     body.mobile-home-redesign .header-info-bar { display:none; }
     body.mobile-home-redesign .header-inner { min-height:60px; padding:7px 0; }
     body.mobile-home-redesign .logo { order:1; }
     body.mobile-home-redesign .logo img { width:108px; }
     body.mobile-home-redesign .nav-pill { order:2; display:flex; margin-left:auto; }
-    body.mobile-home-redesign .nav-pill .cta-pill { display:flex; padding:10px 13px; font-size:0; box-shadow:none; }
-    body.mobile-home-redesign .nav-pill .cta-pill::after { content:"Позвонить"; font-size:12px; }
+    body.mobile-home-redesign .nav-pill .cta-pill { display:flex; min-height:40px; align-items:center; justify-content:center; padding:10px 14px; font-size:0; line-height:1; white-space:nowrap; box-shadow:none; }
+    body.mobile-home-redesign .nav-pill .cta-pill::after { content:"Позвонить"; display:block; font-size:12px; line-height:1; }
     body.mobile-home-redesign .mobile-menu-btn { order:3; width:40px; height:40px; margin-left:7px; }
 
     body.mobile-home-redesign .home-hero-full { display:block; width:calc(100% - 24px); min-height:0; height:auto; margin-top:8px; border-radius:22px; }
@@ -606,7 +607,6 @@
     body.mobile-home-redesign .home-hero-full .trust-chip .tc-icon { width:26px; height:26px; border-radius:7px; }
     body.mobile-home-redesign .home-hero-full .trust-chip .tc-source { font-size:9px; }
     body.mobile-home-redesign .home-hero-full .trust-chip .tc-rating { gap:3px; font-size:10px; }
-    body.mobile-home-redesign .home-hero-full .tc-stars svg:nth-child(n+2) { display:none; }
     body.mobile-home-redesign .home-quick { display:flex; width:calc(100% - 24px); margin-top:10px; overflow-x:auto; border-radius:16px; scroll-snap-type:x mandatory; scrollbar-width:none; }
     body.mobile-home-redesign .home-quick::-webkit-scrollbar { display:none; }
     body.mobile-home-redesign .home-quick > div { flex:0 0 44%; padding:13px 12px; border:0; border-right:1px solid #ECEEF0; scroll-snap-align:start; }
@@ -620,10 +620,11 @@
     body.mobile-home-redesign .services-text-grid { display:flex; gap:10px; overflow-x:auto; padding:0 6px 9px; scroll-snap-type:x mandatory; scrollbar-width:none; }
     body.mobile-home-redesign .services-text-grid::-webkit-scrollbar { display:none; }
     body.mobile-home-redesign .service-text-card { flex:0 0 78%; min-height:176px; padding:18px; scroll-snap-align:start; }
-    body.mobile-home-redesign .service-text-card:first-child { background:#1C2B3E; color:#fff; border-color:#1C2B3E; }
-    body.mobile-home-redesign .service-text-card:first-child .service-text-desc { color:#CBD2DB; }
-    body.mobile-home-redesign .service-text-card:first-child .service-text-link { color:#fff; }
+    body.mobile-home-redesign .service-text-card:first-child { background:linear-gradient(145deg,#fff 55%,#fff6f6); color:#172235; border-color:rgba(152,11,17,.28); }
+    body.mobile-home-redesign .service-text-card:first-child .service-text-desc { color:#667080; }
+    body.mobile-home-redesign .service-text-card:first-child .service-text-link { color:#A90910; }
     body.mobile-home-redesign .services::after { content:"Листайте услуги →"; display:block; padding:3px 7px 0; color:#8993A0; font-size:11px; }
+    body.mobile-home-redesign .mobile-all-services { display:flex; width:calc(100% - 12px); min-height:50px; margin:14px 6px 0; align-items:center; justify-content:center; border:1px solid #D9DEE3; border-radius:999px; background:#fff; color:#172235; font-size:14px; font-weight:800; }
 
     body.mobile-home-redesign .conversion-band { margin:4px 0 32px; padding:24px 20px; }
     body.mobile-home-redesign .conversion-band h2 { font-size:24px; }
@@ -642,19 +643,24 @@
 
     body.mobile-home-redesign .portfolio-teaser { overflow:hidden; }
     body.mobile-home-redesign .portfolio-teaser > p { margin-bottom:18px; font-size:13px; }
-    body.mobile-home-redesign .portfolio-mosaic { display:flex; width:auto; height:auto; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:none; }
+    body.mobile-home-redesign .portfolio-mosaic { display:flex; width:auto; height:335px; gap:10px; align-items:stretch; overflow-x:auto; overflow-y:hidden; overscroll-behavior-inline:contain; scroll-snap-type:x mandatory; scrollbar-width:none; }
     body.mobile-home-redesign .portfolio-mosaic::-webkit-scrollbar { display:none; }
-    body.mobile-home-redesign .portfolio-mosaic .gallery-item,body.mobile-home-redesign .portfolio-mosaic .gallery-item:first-child { flex:0 0 88%; height:335px; scroll-snap-align:center; }
+    body.mobile-home-redesign .portfolio-mosaic .gallery-item,body.mobile-home-redesign .portfolio-mosaic .gallery-item:first-child { flex:0 0 88%; height:335px; min-height:335px; align-self:stretch; scroll-snap-align:center; scroll-snap-stop:always; transform:none!important; }
+    body.mobile-home-redesign .portfolio-mosaic .gallery-item img { display:block; width:100%; height:100%; object-fit:cover; transform:none!important; }
     body.mobile-home-redesign .portfolio-teaser .hero-actions { margin-top:13px; }
     body.mobile-home-redesign .portfolio-teaser .btn-secondary { width:100%; justify-content:center; }
 
     body.mobile-home-redesign .reviews-section { padding:30px 20px; }
     body.mobile-home-redesign .reviews-section .lead { font-size:12px; margin-bottom:15px; }
-    body.mobile-home-redesign .reviews-grid { display:block; }
-    body.mobile-home-redesign .reviews-grid::before { content:"5,0  ★★★★★  ·  Яндекс Карты и 2ГИС"; display:block; margin-bottom:10px; padding:17px; border-radius:16px; background:#1C2B3E; color:#fff; font-size:13px; font-weight:800; }
-    body.mobile-home-redesign .review-card { padding:18px; }
-    body.mobile-home-redesign .review-card:nth-child(n+2) { display:none; }
+    body.mobile-home-redesign .reviews-grid { display:flex; gap:10px; overflow-x:auto; overflow-y:hidden; overscroll-behavior-inline:contain; scroll-snap-type:x mandatory; scrollbar-width:none; }
+    body.mobile-home-redesign .reviews-grid::before { display:none; }
+    body.mobile-home-redesign .review-card { display:flex; flex:0 0 90%; min-height:280px; padding:18px; scroll-snap-align:center; scroll-snap-stop:always; }
+    body.mobile-home-redesign .review-card:nth-child(n+2) { display:flex; }
     body.mobile-home-redesign .review-text { display:-webkit-box; overflow:hidden; -webkit-line-clamp:6; -webkit-box-orient:vertical; font-size:13px; }
+    body.mobile-home-redesign .review-meta a { display:inline-flex; align-items:center; gap:5px; padding:4px 7px; border:1px solid #E0E4E7; border-radius:9px; background:#fff; text-decoration:none; }
+    body.mobile-home-redesign .review-meta a::before { content:""; width:18px; height:18px; flex:0 0 18px; background-position:center; background-repeat:no-repeat; background-size:contain; }
+    body.mobile-home-redesign .review-meta a[href*="yandex.ru"]::before { background-image:url("/assets/yandex-maps.svg"); }
+    body.mobile-home-redesign .review-meta a[href*="2gis.ru"]::before { background-image:url("/assets/2gis.png"); }
 
     body.mobile-home-redesign .home-faq .faq-item { position:relative; padding:17px 45px 17px 17px; cursor:pointer; }
     body.mobile-home-redesign .home-faq .faq-item::after { content:"+"; position:absolute; top:15px; right:17px; color:#A90910; font-size:22px; }
@@ -677,6 +683,11 @@
     body.mobile-home-redesign .footer-col { padding:10px 11px; border:1px solid #E8EBEE; border-radius:13px; }
     body.mobile-home-redesign .footer-col h4 { margin:0; }
     body.mobile-home-redesign .footer-links { display:none; }
+    body.mobile-home-redesign .footer-col h4 { position:relative; padding-right:22px; cursor:pointer; }
+    body.mobile-home-redesign .footer-col h4::after { content:"+"; position:absolute; right:0; top:-3px; color:#A90910; font-size:18px; }
+    body.mobile-home-redesign .footer-col.is-open { grid-column:1/-1; }
+    body.mobile-home-redesign .footer-col.is-open h4::after { content:"−"; }
+    body.mobile-home-redesign .footer-col.is-open .footer-links { display:block; margin-top:10px; }
     body.mobile-home-redesign .footer-bottom-inner { justify-content:center; text-align:center; }
   }
 </style>
@@ -946,6 +957,19 @@
       button.textContent = button.dataset.label || 'Отправить заявку';
     }
   });
+  if(window.matchMedia("(max-width:560px)").matches){
+    document.querySelectorAll(".mobile-home-redesign .footer-col h4").forEach(function(title){
+      title.setAttribute("role","button"); title.setAttribute("tabindex","0"); title.setAttribute("aria-expanded","false");
+      function toggleFooter(){ var col=title.closest(".footer-col"); var open=col.classList.toggle("is-open"); title.setAttribute("aria-expanded",open?"true":"false"); }
+      title.addEventListener("click",toggleFooter);
+      title.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleFooter();} });
+    });
+    document.querySelectorAll(".services-text-grid,.portfolio-mosaic,.reviews-grid").forEach(function(slider){
+      var startX=0,startY=0,startScroll=0;
+      slider.addEventListener("touchstart",function(e){ var t=e.touches[0]; startX=t.clientX; startY=t.clientY; startScroll=slider.scrollLeft; },{passive:true});
+      slider.addEventListener("touchmove",function(e){ var t=e.touches[0],dx=startX-t.clientX,dy=startY-t.clientY; if(Math.abs(dx)>Math.abs(dy)+5){ e.preventDefault(); slider.scrollLeft=startScroll+dx; } },{passive:false});
+    });
+  }
 })();</script>
 </body>
 </html>
